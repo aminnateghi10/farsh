@@ -1,49 +1,97 @@
-
 body {
     direction: rtl;
     text-align: right;
     font-family: Vazir;
     font-weight: 300;
     color: #5a5a5a;
-    font-family:estedad;
+    font-family: estedad;
 }
+
 @font-face {
-    font-family:estedad;
-    src: url(/font/Estedad-Bold.ttf);
+    font-family: estedad;
+    src: url(../font/Estedad-Bold.ttf);
 }
+
 a {
     text-decoration: none;
     color: lavender;
 }
+
 .dropdown-item:hover a {
     text-align: center;
     color: rgb(255, 0, 0);
 }
+
 .dropdown-item:hover {
-background-color: #212529;
+    background-color: #212529;
 }
+
 .animasen {
     width: 150px;
     height: 150px;
 }
-.animasen{
-    transition: all .5S ease;
+
+.animasen {
+    transition: all 0.5s ease;
 }
-.animasen:hover{
+
+.animasen:hover {
     transform: translateY(-5px);
 }
+
 .animasen1:hover {
     color: red !important;
 }
-
-
 
 .single_banner img {
     transition: all 0.3s ease-in-out;
     width: 100%;
 }
+
 .single_banner:hover img {
-	-moz-transform: scale(1.06);
-	-webkit-transform: scale(1.06);
-	transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+.footer_logo {
+    width: 100px;
+}
+
+.img-hover {
+    position: relative;
+}
+
+.img-hover::after {
+    content: "";
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    right: 0;
+    transition: all 1s;
+    opacity: .4;
+}
+
+.img-hover:hover::after {
+    width: 100%;
+    opacity: 0;
+}
+
+.img-hover::before {
+    content: "";
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    transition: all 1s;
+    opacity: .8;
+}
+
+.img-hover:hover::before {
+    width: 100%;
+    opacity: 0;
 }
